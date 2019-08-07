@@ -17,6 +17,7 @@ class Incidencia(models.Model):
 
 class Mese(models.Model):
     mes=models.CharField(max_length=50)
-    incidencia=models.ForeignKey("Incidencia", on_delete=models.CASCADE)
+    incidencia=models.ManyToManyField("Incidencia")
+    registro=models.OneToOneField("Registro", on_delete=models.CASCADE)
     def __str__(self):
         return self.mes    
