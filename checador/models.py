@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Registro(models.Model):
-    hora=models.DateTimeField(auto_now=False, auto_now_add=False)
+    hora=models.DateTimeField(auto_now=False, auto_now_add=False, blank=True, null=True)
     nombre=models.CharField(max_length=50)
     nivel=models.IntegerField()
     observacion=models.TextField(blank=True, null=True)
