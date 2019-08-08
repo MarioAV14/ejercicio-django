@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'checador', 
     'accounts',
-    'Sucursal',
+    'suc',
 ]
 
 MIDDLEWARE = [
