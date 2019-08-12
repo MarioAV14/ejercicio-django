@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'checador', 
     'accounts',
     'suc',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#instalacion de rest framework
+
+REST_FRAMEWORK = {
+   # Use Django’s standard django.contrib.auth permissions,
+   # or allow read-only access for unauthenticated users.
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.SessionAuthentication',
+       'rest_framework.authentication.TokenAuthentication',
+       'rest_framework.authentication.BasicAuthentication',
+   ),
+   'DEFAULT_PERMISSION_CLASSES': [
+       #‘rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly’,
+       #‘rest_framework.permissions.AllowAny’
+       #‘rest_framework.permissions.DjangoModelPermissions’,
+   ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
